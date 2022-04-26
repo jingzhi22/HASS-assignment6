@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html >
+	<head>
+		<meta charset="UTF-8">
+		<title>Pageable - Infinite Scrolling</title>
+		<link rel="stylesheet" href="//cdn.materialdesignicons.com/3.0.39/css/materialdesignicons.min.css">
+		<link rel="stylesheet" href="css/infinite.css">
+	</head>
+	<body>
+		<main>
+			<section data-anchor="page 1">
+                <p>
+                    This is my title
+                    type instructions here
+                </p>
+            </section>
+
+            <section data-anchor="page 2">
+                <p>
+                    Add grid of images here
+                </p>
+            </section>
+
+			<section data-anchor="page 3">
+                <script src="https://d3js.org/d3.v6.js"></script>
+                <div style="width: 100%;">
+                    <svg id="svg1" style="background-color:red"></svg>
+                </div>
+                <script src="js/diagram 1.js"></script>
+            </section>
+
+            <section data-anchor="page 4">
+                <script src="https://d3js.org/d3.v6.js"></script>
+                <div style="width: 100%;">
+                    <svg id="svg2" style="background-color:green"></svg>
+                </div>
+                <script src="js/diagram 2.js"></script>
+            </section>
+
+			<section data-anchor="page 5">
+                <script src="https://d3js.org/d3.v4.js"></script>
+                <div style="width: 100%;">
+                    <div style="width: 70%;  float: left;"> 
+                        <svg id="svg3a" style="background-color:blue"></svg>
+                    </div>
+                    <div style="margin-left: 70%; "> 
+                        <svg id="svg3b" style="background-color:orange">></svg>
+                    </div>
+                </div>
+                <script src="js/diagram 3.js"></script>
+            </section>
+
+		</main>
+		<script src="https://unpkg.com/pageable@latest/dist/pageable.min.js"></script>
+		<script src="js/index.js"></script>
+	</body>
+</html>

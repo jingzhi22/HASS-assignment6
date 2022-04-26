@@ -1,0 +1,75 @@
+,Label,EmployeeCount,VisitorCount,ResidentCount,X,Y,level,space
+0,B1_CLL,2,0,2,0,1,B1,Main Lift Lobby
+1,B1_Carpark,19,0,19,1,1,B1,Carpark
+2,B1_ELL,0,0,0,2,1,B1,Emergency Lift
+3,B1_Posb_bank,7,0,7,3,1,B1,Entrance to bank
+4,B1_R1_LL,8,0,8,4,1,B1,Residential Lift Lobby 1
+5,B1_R2_LL,3,0,3,5,1,B1,Residential Lift Lobby 2
+6,B1_SLL,1,0,1,6,1,B1,Service Lift
+7,B1_Supermarket_entrance_1,38,101,38,7,1,B1,Supermarket Entrance 1
+8,B1_Supermarket_entrance_2,2,2,2,8,1,B1,Supermarket Entrance 2
+9,B2_CLL,10,0,10,0,0,B2,Main Lift Lobby
+10,B2_Carpark,58,0,58,1,0,B2,Carpark
+11,B2_ELL,1,0,1,2,0,B2,Emergency Lift
+12,B2_R1_LL,0,0,0,3,0,B2,Residential Lift Lobby 1
+13,B2_R2_LL,0,0,0,4,0,B2,Residential Lift Lobby 2
+14,B2_SLL,5,0,5,5,0,B2,Service Lift
+15,L10_R1_LL,0,0,0,0,11,L10,Residential Lift Lobby 1
+16,L10_R2_LL,0,0,0,1,11,L10,Residential Lift Lobby 2
+17,L11_R1_LL,0,0,0,0,12,L11,Residential Lift Lobby 1
+18,L11_R2_LL,0,0,0,1,12,L11,Residential Lift Lobby 2
+19,L1_CLL,17,25,17,0,2,L1,Main Lift Lobby
+20,L1_CP,641,99,641,1,2,L1,Community Plaza
+21,L1_ELL,43,298,43,2,2,L1,Emergency Lift
+22,L1_Ent_1,784,40,784,3,2,L1,Main Entrance
+23,L1_Ent_2,14,4,14,4,2,L1,Entrance near Residential Lift Lobby 1
+24,L1_Ent_3,98,16,98,5,2,L1,Entrance near Residential Lift Lobby 2
+25,L1_Ent_mrt,38,117,38,6,2,L1,Entrance from Admiralty MRT
+26,L1_Fish_pond,845,37,845,7,2,L1,Fish Pond
+27,L1_PG,11,0,11,8,2,L1,Playground
+28,L1_R1_LL,11,7,11,9,2,L1,Residential Lift Lobby 1
+29,L1_R2_LL,11,69,11,10,2,L1,Residential Lift Lobby 2
+30,L1_SLL,7841,9,7841,11,2,L1,Service Lift
+31,L1_Walkway,93,464,93,12,2,L1,Walkway
+32,L1_Entrance_3,25,0,25,13,2,L1,Entrance near Residential Lift Lobby 2
+33,L2_CLL,25,29,25,0,3,L2,Main Lift Lobby
+34,L2_ELL,41,33,41,1,3,L2,Emergency Lift
+35,L2_FC,2594,2667,2594,2,3,L2,Food Court
+36,L2_SLL,144,8,144,3,3,L2,Service Lift
+37,L3_CLL,0,0,0,0,4,L3,Main Lift Lobby
+38,L4_CLL,0,0,0,0,5,L4,Main Lift Lobby
+39,L4_R1_LL,3,11,3,1,5,L4,Residential Lift Lobby 1
+40,L4_R1_garden,1,0,1,2,5,L4,Garden near Residential Lift Lobby 1
+41,L4_R2_LL,6,100,6,3,5,L4,Residential Lift Lobby 2
+42,L4_R2_garden,0,10,0,4,5,L4,Garden near Residential Lift Lobby 2
+43,L4_ST,48,25,48,5,5,L4,Garden
+44,L5_R1_LL,0,0,0,0,6,L5,Residential Lift Lobby 1
+45,L5_R2_LL,0,0,0,1,6,L5,Residential Lift Lobby 2
+46,L6_walkway,62,465,62,0,7,L6,Walkway
+47,L6_CLL,37,385,37,1,7,L6,Main Lift Lobby
+48,L6_Deck,0,68,0,2,7,L6,Social Space
+49,L6_ELL,0,46,0,3,7,L6,Emergency Lift
+50,L6_FC,14,1538,14,4,7,L6,Fitness Centre
+51,L6_PG,8,0,8,5,7,L6,Playground
+52,L6_R1_LL,0,19,0,6,7,L6,Residential Lift Lobby 1
+53,L6_R2_LL,0,139,0,7,7,L6,Residential Lift Lobby 2
+54,L6_SLL,12,0,12,8,7,L6,Service Lift
+55,L6_ST,22,166,22,9,7,L6,Garden
+56,L7_walkway,49,0,49,0,8,L7,Walkway
+57,L7_CLL,6,0,6,1,8,L7,Main Lift Lobby
+58,L7_ELL,0,0,0,2,8,L7,Emergency Lift
+59,L7_R1_LL,0,0,0,3,8,L7,Residential Lift Lobby 1
+60,L7_R2_LL,0,0,0,4,8,L7,Residential Lift Lobby 2
+61,L7_SLL,34,0,34,5,8,L7,Service Lift
+62,L8_CG_entrance,0,0,0,0,9,L8,Entrance to Community Garden
+63,L8_CLL,16,10,16,1,9,L8,Main Lift Lobby
+64,L8_ELL,0,0,0,2,9,L8,Emergency Lift
+65,L8_RG,13,14,13,3,9,L8,Walkway
+66,L8_R1_LL,0,0,0,4,9,L8,Residential Lift Lobby 1
+67,L8_R2_LL,0,0,0,5,9,L8,Residential Lift Lobby 2
+68,L8_SLL,0,0,0,6,9,L8,Service Lift
+69,L9_CG,0,279,0,0,10,L9,Community Garden
+70,L9_CG_sitting_area,0,50,0,1,10,L9,Community Garden Sitting Area
+71,L9_R1_LL,0,0,0,2,10,L9,Residential Lift Lobby 1
+72,L9_R2_LL,0,0,0,3,10,L9,Residential Lift Lobby 2
+73,L9_SLL,0,34,0,4,10,L9,Service Lift
