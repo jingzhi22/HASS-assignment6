@@ -7,11 +7,6 @@ let svg3a = d3.select("#svg3a")
 let svg3b = d3.select("#svg3b")
 .attr("viewBox", "0 0 " + dataWidth + " " + height_d3*0.7)
 
-// DEFINE TOOLTIP
-var Tooltip = d3.select("body").append("div")
-    .attr("class", "Tooltip")
-    .style("opacity", 0);
-
 // FUNCTION TO INSTANTIATE CURVE
 var makeCurve = d3.line().curve(d3.curveCatmullRom.alpha(0.5));
 //var makeCurve = d3.line()
@@ -184,9 +179,6 @@ function plotEdges(user, userData, nodeData){
                     .attr("fill", "none")
                     .style("opacity", 1)
 
-                Tooltip.transition()
-                    .style("opacity", .9);
-                
                 svg3b
                     .append("foreignObject")
                     .attr('id','meta')
@@ -201,7 +193,6 @@ function plotEdges(user, userData, nodeData){
                 d3.select(this).transition()
                     .style("stroke", "black")
                     .style("opacity", 0.2)
-                Tooltip.transition().style("opacity", 0)
                 svg3b.select("#meta").remove()
             })
 

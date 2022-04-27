@@ -1,10 +1,12 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto+Mono:400,700");
+
 body {
   margin: 0;
   font-family: "Roboto Mono";
   overflow: hidden;
   font-size: 20px;
   font-weight: bold;
+  color: rgb(49, 49, 49);
 }
 
 h1{
@@ -38,28 +40,27 @@ section {
   align-items: center;
   justify-content: center;
   flex-flow: row;
-  color: #fff;
   position: relative;
 }
 
 #page-1 {
-  background-color: #3F51B5;
+  background-color: #d9c2da;
 }
 
 #page-2 {
-  background-color: #673AB7;
+  background-color: #b7ace7;
 }
 
 #page-3 {
-  background-color: #9C27B0;
+  background-color: #7a9fd6;
 }
 
 #page-4 {
-  background-color: #E91E63;
+  background-color: #ace5e7;
 }
 
 #page-5 {
-  background-color: #F44336;
+  background-color: #ace7c5;
 }
 
 #page-6 {
@@ -180,4 +181,96 @@ nav ul li:hover a span {
 }
 .pg-horizontal nav ul li {
   float: left;
+}
+
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+h1, h2, h3 {
+    font-family: "Open Sans";
+}
+
+body {
+  margin: 0;
+  font-family: "Open Sans";
+}
+
+.container {
+  position: relative;
+  width: 100%;
+}
+
+.header {
+  text-align: center;
+  padding: 32px;
+}
+
+.row {
+  display: -ms-flexbox; /* IE 10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE 10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  -ms-flex: 25%; /* IE 10 */
+  flex: 25%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+}
+
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 10px 16px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.btn:hover {
+  background-color: #ddd;
+}
+
+.overlay {
+  position: absolute; 
+  bottom: 0; 
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #f1f1f1; 
+  width: 100%;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+div.tooltip {
+  position: absolute;
+  text-align: center;
+  width: 60px;
+  height: 28px;
+  padding: 2px;
+  font: 12px sans-serif;
+  background: lightsteelblue;
+  border: 0px;
+  border-radius: 8px;
+  pointer-events: none;
 }

@@ -5,35 +5,100 @@
 		<title>Pageable - Infinite Scrolling</title>
 		<link rel="stylesheet" href="//cdn.materialdesignicons.com/3.0.39/css/materialdesignicons.min.css">
 		<link rel="stylesheet" href="css/style.css">
+        <script src="https://d3js.org/d3.v6.js"></script>
 	</head>
 	<body>
 		<main>
 			<section data-anchor="page 1">
-                <p>
-                    This is my title
-                    type instructions here
-                </p>
+                <div style="width: 100%;">
+                    <h1>Visualizing Space Usage and Movement Patterns in Kampung Admiralty</h1>
+                <h2>Interactive Data Visualisation</h2>
+                <h2>Team: Anjanaa Devi Srikanth, Tay Jing Zhi</h2>
+                <div class="row"> 
+
+                    <div class="column">
+                      <div class="container">
+                        <img src="https://www.greenroofs.com/wp-content/uploads/2021/04/KampungAdmiralty-C-DavidSoh.jpg" alt="Kampung Admiralty" style="width:100%">
+                        <div class="overlay">Kampung Admiralty</div>
+                      </div>
+                      
+                      <div class="container">
+                        <img src="https://www.greenroofs.com/wp-content/uploads/2021/04/Playpoint-Singapore-Pte-Ltd-KampungAdmiralty-21752637_1580147095378138_433647353915983935_o.jpg" alt="Level 6 Playground" style="width:100%">
+                        <div class="overlay">Level 6 Playground</div>
+                      </div>
+                     </div> 
+                  
+                    <div class="column">
+                      <div class="container">
+                        <img src="https://www.greenroofs.com/wp-content/uploads/2021/04/Kampung-Admiralty-PatrickBingham-Hall-036_v2.jpg" alt="Levels 8, 9 Community" style="width:100%">
+                        <div class="overlay">Levels 8, 9 Community Gardens at Kampung Admiralty</div>
+                       </div>
+                  
+                      <div class="container">
+                        <img src="https://www.woha.net/prod/wp-content/uploads/2020/11/KAMPUNG-ADMIRALTY-PBH-079.jpg" alt="Level 1 Public Plaza" style="width:100%">
+                        <div class="overlay">Level 1 Public Plaza</div>
+                      </div>
+                    </div>  
+                  
+                    <div class="column">
+                      <div class="container">
+                        <img src="https://images.adsttc.com/media/images/5bd1/0582/f197/ccd6/5300/00c4/slideshow/_DS30350.jpg?1540425074" alt="Level 2 Food Court overlooking the Public Plaza" style="width:100%">
+                        <div class="overlay">Level 2 Food Court overlooking the Public Plaza</div>
+                      </div>
+                  
+                      <div class="container">
+                        <img src="https://www.greenroofs.com/wp-content/uploads/2021/04/Kampung-Admiralty-PatrickBingham-Hall-076.jpg"  alt="Vertical Public and Green Levels at Kampung Admiralty" style="width:100%">
+                        <div class="overlay">Vertical Public and Green Levels at Kampung Admiralty</div>
+                      </div>    
+                      </div>
+                  
+                    <div class="column">
+                      <div class="container">
+                        <img src="https://images.adsttc.com/media/images/5bd1/066e/f197/cc96/d000/02d8/slideshow/KAMPUNG_ADMIRALTY_PBH_082.jpg?1540425311" alt="Level 4 Medical Centre" style="width:100%">
+                        <div class="overlay">Level 4 Medical Centre</div>
+                      </div>
+                  
+                      <div class="container">
+                        <img src="https://images.adsttc.com/media/images/5bd1/0549/f197/cc96/d000/02d1/slideshow/KA_01.jpg?1540425021" alt="Aerial View of Kampung Admiralty" style="width:100%">
+                        <div class="overlay">Aerial View of Kampung Admiralty</div>
+                      </div>
+                    </div>
+                  </div>
+                <script src="js/diagram 0.js"></script>
             </section>
 
             <section data-anchor="page 2">
-                <p>
-                    Add grid of images here
-                </p>
+                
+                <div style="width: 100%;">
+                    <h3 style="padding: 20px">
+                        Integrated vertical developments are increasingly studied and planned in high-density cities. To investigate the success of vertical integration, we analyze tracked user activity in one development: Kampung Admiralty.
+                        <br><br>
+                        Kampung Admiralty is the first development in Singapore to fully integrate housing for the elderly in a "vertical village." Located next to Admiralty MRT station, the multi-award-winning development offers 104 senior apartments with a host of facilities including a medical center, pharmacy, retail, restaurants, a hawker center (an open-air pavilion with food stalls), and a public park and plaza. 
+                        <br><br>
+                        The Advanced Architecture Lab team in SUTD conducted an experiment in February 2021 to map people movement patterns and the usage of spaces in the vertical development. To better understand the usage of spaces in the vertical layout, we visualize the data of user movement.
+                    </h3>
+                    
+                </div>
+                <img style="float: right; width:50%" src=https://www.greenroofs.com/wp-content/uploads/2021/04/Ramboll-Studio-Dreiseitl-KampungAdmiralty-Section.jpg> 
+                
             </section>
 
 			<section data-anchor="page 3">
-                <script src="https://d3js.org/d3.v6.js"></script>
                 <div style="width: 100%;">
-                    <p>my title here</p>
-                    <svg id="svg1" style="background-color:red"></svg>
+                    <h1>How long does each user spend in public spaces in Kampung Admiralty?</h1>
+                    <h2>What are the trends of time spent in Kampung Admiralty over weekdays and weekends (and special occasions)? </h2>
+                    <svg id="my_dataviz" style="background-color:none"></svg>
+                    <svg id="my_dataviz3" style="background-color:none"></svg>
                 </div>
                 <script src="js/diagram 1.js"></script>
             </section>
 
             <section data-anchor="page 4">
-                <script src="https://d3js.org/d3.v6.js"></script>
-                <div style="width: 100%;">
-                    <svg id="svg2" style="background-color:green"></svg>
+                <div style="width: 60%;">
+                    <h1>Which public spaces in Kampung Admiralty are used the most?</h1>
+                    <h2>Which spaces are the main attractors on each level? </h2>
+                    <svg id="my_dataviz1" style="background-color:none"></svg>
+                    <svg id="my_dataviz2" style="background-color:none"></svg>
                 </div>
                 <script src="js/diagram 2.js"></script>
             </section>
