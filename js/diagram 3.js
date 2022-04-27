@@ -138,6 +138,7 @@ function getCleanEdgeText(data){
     var clean = "<h3>Edge</h3>";
     clean += "<h3>" + data.values[0].trip_id.split('_')[0] + " trip " + data.values[0].trip_id.split('_')[1] + "</h3>";
     var currLoc = data.values[0].location_z
+    clean += "<p>" + data.values[0].level + " " + data.values[0].space + " " + data.values[0].duration_min + " min" + "</p>"
     var row_count = 0
     for(let i = 0; i<data.values.length; i++){
         values = data.values[i]
