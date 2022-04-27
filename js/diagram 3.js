@@ -1,11 +1,11 @@
-let width_d3 = 800, height_d3 = 350;
+let width_d3 = 800, height_d3 = 300;
 let graphWidth = width_d3*0.7, dataWidth = width_d3*0.3
 let xoffset = 0.1
 let svg3a = d3.select("#svg3a")
 .attr("viewBox", "0 0 " + graphWidth + " " + height_d3)
 
 let svg3b = d3.select("#svg3b")
-.attr("viewBox", "0 0 " + dataWidth + " " + height_d3)
+.attr("viewBox", "0 0 " + dataWidth + " " + height_d3*0.7)
 
 // DEFINE TOOLTIP
 var Tooltip = d3.select("body").append("div")
@@ -93,6 +93,15 @@ function getTripCoor(tripData, nodeData){
     return tripCoor
 }
 
+function getCleanNodeText(row){
+    var clean = "<h3>Node</h3>";
+    clean += "<h3>" + row.level + ' ' + row.space + "</h3>";
+    clean += "<p>Employee visits: " + row.EmployeeCount + "</p>"
+    clean += "<p>Resident visits: " + row.ResidentCount + "</p>"
+    clean += "<p>Visitor visits: " + row.VisitorCount + "</p>"
+    return clean
+}
+
 // FUNCTION TO PLOT NODES
 function plotNodes(nodeData){
     for(let i = 0; i < nodeData.length; i++){
@@ -104,43 +113,42 @@ function plotNodes(nodeData){
             .attr("r", 2 + (5 * Math.log(totalCount+1) / Math.log(100000)))
             .on("mouseover", function (event,d) 
             {
-                Tooltip.transition()
-                    .style("opacity", .9);
-                Tooltip.html(
-                    "Node" + "<br/>" +
-                    row.level + ' ' + row.space + "<br/><br/>" +
-                    "Employee Count: " + row.EmployeeCount + "<br/>" +
-                    "Resident Count: " + row.ResidentCount + "<br/>" +
-                    "Visitor Count: " + row.VisitorCount
-                )
-                .style("left", (70) + "%")
-                .style("top", (5) + "%");
+                CleanNodeText = getCleanNodeText(row)
+
+                svg3b.append("foreignObject")
+                    .attr('id','meta')
+                    .attr("width", "100%")
+                    .attr("height", "100%")
+                    .append("xhtml:div")
+                    .style("font-size", "20%")
+                    .html(CleanNodeText);
+
                 d3.select(this).transition()
                     .style("fill", "yellow")
             })
             .on("mouseleave",function (event,d){
-                Tooltip.transition().style("opacity", 0)
-                d3.select(this).transition()
-                    .style("fill", "black")
+                svg3b.select("#meta").remove()
+
+                d3.select(this).transition().style("fill", "black")
             });
     }
 }
 
 function getCleanEdgeText(data){
-    var clean = "Edge" + "<br/>";
-    clean += data.values[0].trip_id + "<br/><br/>";
+    var clean = "<h3>Edge</h3>";
+    clean += "<h3>" + data.values[0].trip_id.split('_')[0] + " trip " + data.values[0].trip_id.split('_')[1] + "</h3>";
     var currLoc = data.values[0].location_z
     var row_count = 0
     for(let i = 0; i<data.values.length; i++){
         values = data.values[i]
         if(values.location_z != currLoc)
         {
-            clean += values.level + " " + values.space + " " + values.duration_min + " min" + "<br/>"
+            clean += "<p>" + values.level + " " + values.space + " " + values.duration_min + " min" + "</p>"
             currLoc = values.location_z
             row_count += 1
         }
         if (row_count > 10){
-            clean += "..."
+            clean += "<p>...</p>"
             break
         }
         }
@@ -167,7 +175,6 @@ function plotEdges(user, userData, nodeData){
                 var tripCoor = getTripCoor(d.values, nodeData);
                 return makeCurve(tripCoor)
             })
-            .moveToBack()
             .on("mouseover", function (event,d){
                 var cleanEdgeText = getCleanEdgeText(sumstat[d])
 
@@ -178,19 +185,23 @@ function plotEdges(user, userData, nodeData){
 
                 Tooltip.transition()
                     .style("opacity", .9);
+                
+                svg3b
+                    .append("foreignObject")
+                    .attr('id','meta')
+                    .attr("width", "100%")
+                    .attr("height", "100%")
+                    .append("xhtml:div")
+                    .style("font-size", "20%")
+                    .html(cleanEdgeText);
 
-                Tooltip.html(
-                    cleanEdgeText
-                    )
-                    .style("left", (70) + "%")
-                    .style("top", (5) + "%");
             })
             .on("mouseleave",function (event,d){
                 d3.select(this).transition()
                     .style("stroke", "black")
                     .style("opacity", 0.2)
-                    .moveToBack()
                 Tooltip.transition().style("opacity", 0)
+                svg3b.select("#meta").remove()
             })
 
 }
@@ -203,10 +214,9 @@ d3.queue()
     
     // Create menu
     createMenu(userData)
-    createYAxis()
 
-    // Plt nodes
-    plotNodes(nodeData);
+    // Create axis
+    createYAxis()
 
     // Initialize graph
     plotEdges("All Users", userData, nodeData)
@@ -217,5 +227,8 @@ d3.queue()
         var selectedUser = d3.select(this).property("value")
         plotEdges(selectedUser, userData, nodeData);
    });
+
+   // Plt nodes
+   plotNodes(nodeData);
 
 })

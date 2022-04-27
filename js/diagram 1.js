@@ -9,4 +9,3 @@ svg1.append("text")
     .attr("dominant-baseline", "middle")
     .attr("text-anchor", "middle")
     .text("diagram 1")
-

@@ -4,7 +4,7 @@
 		<meta charset="UTF-8">
 		<title>Pageable - Infinite Scrolling</title>
 		<link rel="stylesheet" href="//cdn.materialdesignicons.com/3.0.39/css/materialdesignicons.min.css">
-		<link rel="stylesheet" href="css/infinite.css">
+		<link rel="stylesheet" href="css/style.css">
 	</head>
 	<body>
 		<main>
@@ -24,6 +24,7 @@
 			<section data-anchor="page 3">
                 <script src="https://d3js.org/d3.v6.js"></script>
                 <div style="width: 100%;">
+                    <p>my title here</p>
                     <svg id="svg1" style="background-color:red"></svg>
                 </div>
                 <script src="js/diagram 1.js"></script>
@@ -39,12 +40,17 @@
 
 			<section data-anchor="page 5">
                 <script src="https://d3js.org/d3.v4.js"></script>
+                
                 <div style="width: 100%;">
+                    <h1>How are different user groups using the space?</h1>
+                    <h2>Which circulation path is most travelled?</h2>
+                    <h2>What are the sequence of spaces visited for each trip?</h2>
+                    <select id="selectButton"></select>
                     <div style="width: 70%;  float: left;"> 
-                        <svg id="svg3a" style="background-color:blue"></svg>
+                        <svg id="svg3a" style="background-color:none"></svg>
                     </div>
-                    <div style="margin-left: 70%; "> 
-                        <svg id="svg3b" style="background-color:orange">></svg>
+                    <div style="margin-left: 70%;" id="meta"> 
+                        <svg id="svg3b" style="background-color:none"></svg>
                     </div>
                 </div>
                 <script src="js/diagram 3.js"></script>
